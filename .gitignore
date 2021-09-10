@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 /model.pkl
-bash_history
+.bash_history
