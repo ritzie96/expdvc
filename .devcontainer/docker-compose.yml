@@ -1,0 +1,16 @@
+version: "3"
+services:
+  dev-container:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+      target: dev-container
+    volumes:
+    - ..:/workspace
+    - /tmp:/tmp
+    - ../.bash_history:/bash_history
+    # - ~/.config/gcloud:/home/vion/.config/gcloud
+    - /var/run/docker.sock:/var/run/docker.sock
+    # environment:
+    # - GCLOUD_PROJECT=ml-shared
+    command: /bin/sh -c "while sleep 1000; do :; done"

@@ -1,0 +1,13 @@
+{
+    "name": "expDVC",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dev-container",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+    ],
+    "initializeCommand": "mkdir -p .bash_history",
+    "postCreateCommand": "pre-commit install --install-hooks"
+}
